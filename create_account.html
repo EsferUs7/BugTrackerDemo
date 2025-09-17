@@ -39,7 +39,11 @@
     - the first character must be a letter
     - it can contain letters, numbers, underscore, hyphen
     - the length is between 12 to 20 including">
-    <input type="password" id="password" placeholder="Password" title="Password must be defined with the rules">
+    <input type="password" id="password" placeholder="Password" title="Password must be defined with the following rules:
+    - password length must be at least 12 characters
+    - password must contain number, at least one lower case letter
+    - password must contain at least one upper case letter and at least one special character
+    - allowed special characters: !@#$%^&+=">
     <input type="password" id="confirm" placeholder="Confirm Password">
     <button id="registerBtn" title="Click to Sign Up">Sing Up</button>
     <button type="button" title="Click to Cancel" onclick="window.location.href='index.html'">Cancel</button>
