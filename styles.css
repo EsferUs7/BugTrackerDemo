@@ -1,0 +1,235 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background: #222;
+  color: white;
+  padding: 5px 10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f2f2f2;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.signout {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  background: #444;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #555;
+  color: white;
+}
+
+.tab-button.active {
+  background: #222;
+}
+
+.toolbar {
+  padding: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-container {
+  overflow-x: auto;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #eee;
+  border-top: 1px solid #ccc;
+}
+
+.footer-item {
+  font-size: 14px;
+}
+
+/* Registration form */
+.registration {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  background: #fafafa;
+}
+
+.registration label {
+  display: block;
+  margin: 10px 0;
+}
+
+.registration input {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Find Report --- */
+.find-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.find-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.find-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.find-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.find-col label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.find-col select {
+  padding: 4px 6px;
+  min-width: 140px;
+}
+
+.find-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.find-col.radio-col {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 6px;
+}
+
+/* --- Загальні стилі кнопок --- */
+button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+button:enabled {
+  background: #4f4d4d;
+  color: white;
+}
+
+button:enabled:hover {
+  background: #b6b6b6;
+}
+
+button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Центрування всіх комірок таблиці */
+#bugTable th,
+#bugTable td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Колонка Summary – особливі правила */
+#bugTable th:nth-child(2) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#bugTable td:nth-child(2) {
+  text-align: left;
+  vertical-align: middle;
+}

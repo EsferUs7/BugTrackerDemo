@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Start Up Bug Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="menu">
+      <div class="dropdown">
+        <button class="dropbtn" title="Actions menu">ACTIONS</button>
+        <div class="dropdown-content" id="actionsMenu">
+          <a href="#">Create Report</a>
+          <a href="#">Edit Report</a>
+          <a href="#">Export Report</a>
+          <a href="#">Sign Out</a>
+          <a href="#">Exit</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" title="Help menu">HELP</button>
+        <div class="dropdown-content" id="helpMenu">
+          <a href="#">Help Content</a>
+        </div>
+      </div>
+    </div>
+    <button class="signout" title="Click to Sign Out">Sign Out</button>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="create" title="Create Report tab">Create Report</button>
+    <button class="tab-button" data-tab="edit" title="Edit Report tab">Edit Report</button>
+    <button class="tab-button" data-tab="find" title="Find Report tab">Find Report</button>
+    <button class="tab-button" data-tab="export" title="Export Report tab">Export Report</button>
+    <button class="tab-button" data-tab="admin" title="Account Administration tab">Account Administration</button>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar" id="toolbar"></div>
+
+  <!-- Registration Form (hidden by default) -->
+  <div id="registrationForm" class="registration hidden">
+    <h3>Create Account</h3>
+    <label>Username:
+      <input type="text" id="regUsername" placeholder="Enter username"
+        title="User Name must be defined with the following rules:
+- the first character must be a letter
+- it can contain letters, numbers, underscore, hyphen
+- the length is between 12 to 20 including">
+    </label>
+    <label>Password:
+      <input type="password" id="regPassword" placeholder="Enter password"
+        title="Password must be defined with the following rules:
+- password length must be at least 12 characters
+- password must contain number, at least one lower case letter
+- password must contain at least one upper case letter and at least one special character
+- allowed special characters: !@#$%^&+=">
+    </label>
+    <label>Confirm Password:
+      <input type="password" id="regConfirm" placeholder="Confirm password">
+    </label>
+    <button id="regSubmit" title="Register new account">Register</button>
+    <button id="regCancel" title="Cancel registration">Cancel</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-container">
+    <table id="bugTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Summary</th>
+          <th>Project</th>
+          <th>Issue Type</th>
+          <th>Priority</th>
+          <th>Affect Version</th>
+          <th>Fix Version</th>
+          <th>Reporter</th>
+          <th>Assignee</th>
+          <th>Severity</th>
+          <th>Status</th>
+          <th>Due Date</th>
+          <th>Creation Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bug-101</td>
+          <td>This is an example</td>
+          <td>QA_Start_Up</td>
+          <td>Bug</td>
+          <td>Major</td>
+          <td>v.01</td>
+          <td>v.02</td>
+          <td>TestAdmin</td>
+          <td>TestAdmin</td>
+          <td>High</td>
+          <td>Open</td>
+          <td>2025-09-20</td>
+          <td>2025-09-10</td>
+        </tr>
+        <tr>
+          <td>Bug-102</td>
+          <td>This is an example</td>
+          <td>Testing_Project</td>
+          <td>Bug</td>
+          <td>Major</td>
+          <td>v.02</td>
+          <td>v.03</td>
+          <td>TestAdmin</td>
+          <td>TestAdmin</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>2025-09-22</td>
+          <td>2025-09-12</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-item" title="Amount of reports in the system">
+      All Reports: <span id="allReports">2</span>
+    </div>
+    <div class="footer-item" title="Amount of reports in the Data Grid">
+      Shown Reports: <span id="shownReports">2</span>
+    </div>
+    <div class="footer-item" title="User Name of current user">
+      Current User: <span id="currentUser">TestAdmin</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f3f3f3;
+    }
+    .register-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .register-box input {
+      display: block;
+      margin: 10px auto;
+      padding: 8px;
+      width: 250px;
+    }
+    .register-box button {
+      padding: 8px 20px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-box">
+    <h2>Create Account</h2>
+    <input type="text" id="username" placeholder="User Name" title="User Name must be defined with the following rules:
+    - the first character must be a letter
+    - it can contain letters, numbers, underscore, hyphen
+    - the length is between 12 to 20 including">
+    <input type="password" id="password" placeholder="Password" title="Password must be defined with the rules">
+    <input type="password" id="confirm" placeholder="Confirm Password">
+    <button id="registerBtn" title="Click to Sign Up">Sing Up</button>
+    <button type="button" title="Click to Cancel" onclick="window.location.href='index.html'">Cancel</button>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
