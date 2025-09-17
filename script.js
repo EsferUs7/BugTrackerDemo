@@ -205,7 +205,7 @@ function setToolbar(tab) {
                 return;
             }
 
-            alert("Reports filtered successfully (mock). If no matches -> No Reports were found to match your search");
+            alert("No Reports were found to match your search");
         });
 
         updateControls();
